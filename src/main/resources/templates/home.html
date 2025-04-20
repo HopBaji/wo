@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>home page</title>
+  <form th:action="@{/login}" method="post">
+    <div>
+      <input type="submit" value="Login"/>
+    </div>
+  </form>
+</head>
+<body>
+<section class="AllAdvertisement">
+  <h3 >Актуальная информация</h3>
+  <div th:each="el : ${Advertisement}" class="editInformation">
+    <div>
+      <p th:text="${el.name}" class="size" name="text" id="1" placeholder="Текст"></p>
+      <p th:text="${el.category}" class="size" name="text" id="2" placeholder="Текст"></p>
+      <p th:text="${el.sel}" class="size" name="text" id="3" placeholder="Текст"></p>
+      <p th:text="${el.subcategory}" class="size" name="text" id="4" placeholder="Текст"></p>
+    </div>
+    <hr class="hh1">
+  </div>
+</section>
+</body>
+</html>
